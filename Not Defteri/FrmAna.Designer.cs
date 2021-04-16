@@ -111,6 +111,8 @@
             this.tSAllOpenClose = new System.Windows.Forms.ToolStripMenuItem();
             this.tSOtherClose = new System.Windows.Forms.ToolStripMenuItem();
             this.tSKaydet = new System.Windows.Forms.ToolStripMenuItem();
+            this.tSUpper = new System.Windows.Forms.ToolStripButton();
+            this.tSLower = new System.Windows.Forms.ToolStripButton();
             this.tStrAna.BottomToolStripPanel.SuspendLayout();
             this.tStrAna.ContentPanel.SuspendLayout();
             this.tStrAna.LeftToolStripPanel.SuspendLayout();
@@ -204,6 +206,7 @@
             this.tSNew.Name = "tSNew";
             this.tSNew.Size = new System.Drawing.Size(23, 24);
             this.tSNew.Text = "&Yeni";
+            this.tSNew.Click += new System.EventHandler(this.tSNew_Click);
             // 
             // tSOpen
             // 
@@ -213,6 +216,7 @@
             this.tSOpen.Name = "tSOpen";
             this.tSOpen.Size = new System.Drawing.Size(23, 24);
             this.tSOpen.Text = "&Aç";
+            this.tSOpen.Click += new System.EventHandler(this.tSOpen_Click);
             // 
             // tSSave
             // 
@@ -222,6 +226,7 @@
             this.tSSave.Name = "tSSave";
             this.tSSave.Size = new System.Drawing.Size(23, 24);
             this.tSSave.Text = "&Kaydet";
+            this.tSSave.Click += new System.EventHandler(this.tSSave_Click);
             // 
             // tSil
             // 
@@ -229,7 +234,7 @@
             this.tSil.Image = ((System.Drawing.Image)(resources.GetObject("tSil.Image")));
             this.tSil.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tSil.Name = "tSil";
-            this.tSil.Size = new System.Drawing.Size(38, 24);
+            this.tSil.Size = new System.Drawing.Size(23, 24);
             this.tSil.Text = "Sil";
             this.tSil.Click += new System.EventHandler(this.tSil_Click);
             // 
@@ -255,6 +260,7 @@
             this.tSCut.Name = "tSCut";
             this.tSCut.Size = new System.Drawing.Size(23, 24);
             this.tSCut.Text = "K&es";
+            this.tSCut.Click += new System.EventHandler(this.tSCut_Click);
             // 
             // tSCopy
             // 
@@ -264,6 +270,7 @@
             this.tSCopy.Name = "tSCopy";
             this.tSCopy.Size = new System.Drawing.Size(23, 24);
             this.tSCopy.Text = "&Kopya";
+            this.tSCopy.Click += new System.EventHandler(this.tSCopy_Click);
             // 
             // tSPaste
             // 
@@ -273,6 +280,7 @@
             this.tSPaste.Name = "tSPaste";
             this.tSPaste.Size = new System.Drawing.Size(23, 24);
             this.tSPaste.Text = "&Yapıştır";
+            this.tSPaste.Click += new System.EventHandler(this.tSPaste_Click);
             // 
             // toolStripSeparator7
             // 
@@ -343,7 +351,7 @@
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(213, 6);
             // 
             // tStrSave
             // 
@@ -365,7 +373,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
             // 
             // tStrPrint
             // 
@@ -373,7 +381,7 @@
             this.tStrPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tStrPrint.Name = "tStrPrint";
             this.tStrPrint.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.tStrPrint.Size = new System.Drawing.Size(180, 26);
+            this.tStrPrint.Size = new System.Drawing.Size(216, 26);
             this.tStrPrint.Text = "&Yazdır";
             // 
             // tStrPrintView
@@ -381,19 +389,19 @@
             this.tStrPrintView.Image = ((System.Drawing.Image)(resources.GetObject("tStrPrintView.Image")));
             this.tStrPrintView.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tStrPrintView.Name = "tStrPrintView";
-            this.tStrPrintView.Size = new System.Drawing.Size(180, 26);
+            this.tStrPrintView.Size = new System.Drawing.Size(216, 26);
             this.tStrPrintView.Text = "&Görüntüle";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(213, 6);
             // 
             // tStrExit
             // 
             this.tStrExit.Name = "tStrExit";
             this.tStrExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F9)));
-            this.tStrExit.Size = new System.Drawing.Size(180, 26);
+            this.tStrExit.Size = new System.Drawing.Size(216, 26);
             this.tStrExit.Text = "&Kapat";
             // 
             // tStrEdit
@@ -417,6 +425,7 @@
             this.tStrUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.tStrUndo.Size = new System.Drawing.Size(216, 26);
             this.tStrUndo.Text = "&Geri Al";
+            this.tStrUndo.Click += new System.EventHandler(this.tStrUndo_Click);
             // 
             // tStrRedo
             // 
@@ -424,6 +433,7 @@
             this.tStrRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.tStrRedo.Size = new System.Drawing.Size(216, 26);
             this.tStrRedo.Text = "&İleri Al";
+            this.tStrRedo.Click += new System.EventHandler(this.tStrRedo_Click);
             // 
             // toolStripSeparator3
             // 
@@ -438,6 +448,7 @@
             this.tStrCut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.tStrCut.Size = new System.Drawing.Size(216, 26);
             this.tStrCut.Text = "&Kes";
+            this.tStrCut.Click += new System.EventHandler(this.tStrCut_Click);
             // 
             // tStrCopy
             // 
@@ -447,6 +458,7 @@
             this.tStrCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.tStrCopy.Size = new System.Drawing.Size(216, 26);
             this.tStrCopy.Text = "&Kopyala";
+            this.tStrCopy.Click += new System.EventHandler(this.tStrCopy_Click);
             // 
             // tStrPaste
             // 
@@ -456,6 +468,7 @@
             this.tStrPaste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.tStrPaste.Size = new System.Drawing.Size(216, 26);
             this.tStrPaste.Text = "&Yapıştır";
+            this.tStrPaste.Click += new System.EventHandler(this.tStrPaste_Click);
             // 
             // toolStripSeparator4
             // 
@@ -467,6 +480,7 @@
             this.tStrSelectAll.Name = "tStrSelectAll";
             this.tStrSelectAll.Size = new System.Drawing.Size(216, 26);
             this.tStrSelectAll.Text = "&Tümünü Seç";
+            this.tStrSelectAll.Click += new System.EventHandler(this.tStrSelectAll_Click);
             // 
             // tSTools
             // 
@@ -540,6 +554,8 @@
             this.tSUnline,
             this.tSStrike,
             this.toolStripSeparator8,
+            this.tSUpper,
+            this.tSLower,
             this.tSIncrease,
             this.tSDecrease,
             this.toolStripSeparator9,
@@ -551,7 +567,7 @@
             this.tSFontSize});
             this.toolStrip2.Location = new System.Drawing.Point(3, 28);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(532, 35);
+            this.toolStrip2.Size = new System.Drawing.Size(669, 35);
             this.toolStrip2.TabIndex = 1;
             // 
             // tSBold
@@ -563,6 +579,7 @@
             this.tSBold.Name = "tSBold";
             this.tSBold.Size = new System.Drawing.Size(28, 32);
             this.tSBold.Text = "B";
+            this.tSBold.Click += new System.EventHandler(this.tSBold_Click);
             // 
             // tSItalic
             // 
@@ -573,6 +590,7 @@
             this.tSItalic.Name = "tSItalic";
             this.tSItalic.Size = new System.Drawing.Size(23, 32);
             this.tSItalic.Text = "I";
+            this.tSItalic.Click += new System.EventHandler(this.tSItalic_Click);
             // 
             // tSUnline
             // 
@@ -583,6 +601,7 @@
             this.tSUnline.Name = "tSUnline";
             this.tSUnline.Size = new System.Drawing.Size(29, 32);
             this.tSUnline.Text = "U";
+            this.tSUnline.Click += new System.EventHandler(this.tSUnline_Click);
             // 
             // tSStrike
             // 
@@ -593,6 +612,7 @@
             this.tSStrike.Name = "tSStrike";
             this.tSStrike.Size = new System.Drawing.Size(26, 32);
             this.tSStrike.Text = "S";
+            this.tSStrike.Click += new System.EventHandler(this.tSStrike_Click);
             // 
             // toolStripSeparator8
             // 
@@ -608,6 +628,7 @@
             this.tSIncrease.Name = "tSIncrease";
             this.tSIncrease.Size = new System.Drawing.Size(43, 32);
             this.tSIncrease.Text = "A+";
+            this.tSIncrease.Click += new System.EventHandler(this.tSIncrease_Click);
             // 
             // tSDecrease
             // 
@@ -617,6 +638,7 @@
             this.tSDecrease.Name = "tSDecrease";
             this.tSDecrease.Size = new System.Drawing.Size(29, 32);
             this.tSDecrease.Text = "A-";
+            this.tSDecrease.Click += new System.EventHandler(this.tSDecrease_Click);
             // 
             // toolStripSeparator9
             // 
@@ -633,6 +655,7 @@
             this.tSColored.Name = "tSColored";
             this.tSColored.Size = new System.Drawing.Size(28, 32);
             this.tSColored.Text = "A";
+            this.tSColored.Click += new System.EventHandler(this.tSColored_Click);
             // 
             // toolStripSeparator10
             // 
@@ -662,13 +685,15 @@
             // 
             this.tSFontType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tSFontType.Name = "tSFontType";
-            this.tSFontType.Size = new System.Drawing.Size(121, 35);
+            this.tSFontType.Size = new System.Drawing.Size(250, 35);
+            this.tSFontType.SelectedIndexChanged += new System.EventHandler(this.tSFontType_SelectedIndexChanged);
             // 
             // tSFontSize
             // 
             this.tSFontSize.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tSFontSize.Name = "tSFontSize";
-            this.tSFontSize.Size = new System.Drawing.Size(121, 35);
+            this.tSFontSize.Size = new System.Drawing.Size(75, 35);
+            this.tSFontSize.SelectedIndexChanged += new System.EventHandler(this.tSFontSize_SelectedIndexChanged);
             // 
             // tSLime
             // 
@@ -676,6 +701,7 @@
             this.tSLime.ForeColor = System.Drawing.Color.Lime;
             this.tSLime.Name = "tSLime";
             this.tSLime.Size = new System.Drawing.Size(216, 26);
+            this.tSLime.Click += new System.EventHandler(this.tSLime_Click);
             // 
             // tSRed
             // 
@@ -683,6 +709,7 @@
             this.tSRed.ForeColor = System.Drawing.Color.Red;
             this.tSRed.Name = "tSRed";
             this.tSRed.Size = new System.Drawing.Size(216, 26);
+            this.tSRed.Click += new System.EventHandler(this.tSRed_Click);
             // 
             // tSYellow
             // 
@@ -690,6 +717,7 @@
             this.tSYellow.ForeColor = System.Drawing.Color.Yellow;
             this.tSYellow.Name = "tSYellow";
             this.tSYellow.Size = new System.Drawing.Size(216, 26);
+            this.tSYellow.Click += new System.EventHandler(this.tSYellow_Click);
             // 
             // openFileDialog1
             // 
@@ -699,6 +727,11 @@
             // saveFileDialog1
             // 
             this.saveFileDialog1.Filter = "Zengin Metin Dosyası | *.rtf";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // tabControl1
             // 
@@ -795,6 +828,28 @@
             this.tSKaydet.Text = "Kaydet";
             this.tSKaydet.Click += new System.EventHandler(this.tSKaydet_Click);
             // 
+            // tSUpper
+            // 
+            this.tSUpper.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tSUpper.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tSUpper.Image = ((System.Drawing.Image)(resources.GetObject("tSUpper.Image")));
+            this.tSUpper.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tSUpper.Name = "tSUpper";
+            this.tSUpper.Size = new System.Drawing.Size(28, 32);
+            this.tSUpper.Text = "A";
+            this.tSUpper.Click += new System.EventHandler(this.tSUpper_Click);
+            // 
+            // tSLower
+            // 
+            this.tSLower.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tSLower.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tSLower.Image = ((System.Drawing.Image)(resources.GetObject("tSLower.Image")));
+            this.tSLower.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tSLower.Name = "tSLower";
+            this.tSLower.Size = new System.Drawing.Size(26, 32);
+            this.tSLower.Text = "a";
+            this.tSLower.Click += new System.EventHandler(this.tSLower_Click);
+            // 
             // FrmAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -805,6 +860,7 @@
             this.MainMenuStrip = this.mStrTop;
             this.Name = "FrmAna";
             this.Text = "Not Defterim";
+            this.Load += new System.EventHandler(this.FrmAna_Load);
             this.tStrAna.BottomToolStripPanel.ResumeLayout(false);
             this.tStrAna.BottomToolStripPanel.PerformLayout();
             this.tStrAna.ContentPanel.ResumeLayout(false);
@@ -910,6 +966,8 @@
         private System.Windows.Forms.ToolStripMenuItem tSOpenClose;
         private System.Windows.Forms.ToolStripMenuItem tSAllOpenClose;
         private System.Windows.Forms.ToolStripMenuItem tSOtherClose;
+        private System.Windows.Forms.ToolStripButton tSUpper;
+        private System.Windows.Forms.ToolStripButton tSLower;
     }
 }
 
